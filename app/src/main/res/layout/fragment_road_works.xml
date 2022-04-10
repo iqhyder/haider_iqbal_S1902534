@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iqbal_Haider_S1902534-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.RoadWorksFragment">
+
+        <ImageView
+            android:id="@+id/iv_no_traffic"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/green" />
+
+        <ImageView
+            android:id="@+id/iv_less_traffic"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintStart_toEndOf="@+id/tv_no_traffic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/orange" />
+
+        <ImageView
+            android:id="@+id/iv_more_traffic"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintStart_toEndOf="@+id/tv_less_traffic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+        <ProgressBar
+            android:id="@+id/pb_current"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:indeterminateTint="@color/secondary_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_no_traffic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="No Traffic."
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/iv_no_traffic"
+            app:layout_constraintStart_toEndOf="@+id/iv_no_traffic"
+            app:layout_constraintTop_toTopOf="@id/iv_no_traffic" />
+
+        <TextView
+            android:id="@+id/tv_more_traffic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="More Traffic."
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/iv_more_traffic"
+            app:layout_constraintStart_toEndOf="@+id/iv_more_traffic"
+            app:layout_constraintTop_toTopOf="@id/iv_more_traffic" />
+
+        <TextView
+            android:id="@+id/tv_less_traffic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Less Traffic."
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/iv_less_traffic"
+            app:layout_constraintStart_toEndOf="@+id/iv_less_traffic"
+            app:layout_constraintTop_toTopOf="@id/iv_less_traffic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_road_works"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_no_traffic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

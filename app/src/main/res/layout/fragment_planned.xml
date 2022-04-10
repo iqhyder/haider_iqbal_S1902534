@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iqbal_Haider_S1902534-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PlannedFragment">
+
+    <ImageView
+        android:id="@+id/iv_no_traffic"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_dot"
+        app:tint="@color/green"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_no_traffic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Traffic."
+        android:textColor="@color/gray"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@+id/iv_no_traffic"
+        app:layout_constraintTop_toTopOf="@id/iv_no_traffic"
+        app:layout_constraintBottom_toBottomOf="@id/iv_no_traffic"/>
+
+    <ImageView
+        android:id="@+id/iv_less_traffic"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_dot"
+        app:tint="@color/orange"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@+id/tv_no_traffic"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_less_traffic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Less Traffic."
+        android:textColor="@color/gray"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@+id/iv_less_traffic"
+        app:layout_constraintTop_toTopOf="@id/iv_less_traffic"
+        app:layout_constraintBottom_toBottomOf="@id/iv_less_traffic"/>
+
+    <ImageView
+        android:id="@+id/iv_more_traffic"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_dot"
+        app:tint="@color/red"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@+id/tv_less_traffic"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_more_traffic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Traffic."
+        android:textColor="@color/gray"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@+id/iv_more_traffic"
+        app:layout_constraintTop_toTopOf="@id/iv_more_traffic"
+        app:layout_constraintBottom_toBottomOf="@id/iv_more_traffic"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_planned"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_plan_journey"
+        app:layout_constraintTop_toBottomOf="@+id/iv_no_traffic"/>
+
+    <TextView
+        android:id="@+id/tv_plan_journey"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/edt_bg"
+        android:text="Plan Journey"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="center"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/pb_current"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:indeterminateTint="@color/secondary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
